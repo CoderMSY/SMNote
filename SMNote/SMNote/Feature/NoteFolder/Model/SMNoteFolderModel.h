@@ -12,7 +12,7 @@
 
 @property (nonatomic, copy) NSString *title; ///< 标题
 @property (nonatomic, strong) NSNumber *number; //!< 个数
-@property (nonatomic, strong) NSNumber *order; //!<文件夹标记顺序
+@property (nonatomic, strong) NSNumber *order; //!<文件夹标记顺序 (order==0 为废纸篓标记)
 
 @end
 

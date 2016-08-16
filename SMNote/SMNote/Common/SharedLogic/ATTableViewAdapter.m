@@ -99,6 +99,11 @@
             [_adapterDelegate willDisplayCell:cell forRowAtIndexPath:indexPath];
         }
     }
+    
+//    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
+//    [UIView animateWithDuration:0.5 animations:^{
+//        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
+//    }];
 }
 
 @end

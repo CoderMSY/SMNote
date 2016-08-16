@@ -83,42 +83,35 @@
             }
             if (isEmptyFolder) {
                 //删除这些空文件夹
-                for (SMNoteFolderModel *folder in weakSelf.adapter.deleteArray) {
-                    [[_Dao getFolderDao] clearNoteTable:folder.order];
-                }
-                [weakSelf.adapter.adapterArray removeObjectsInArray:weakSelf.adapter.deleteArray];
-                [weakSelf.folderView refreshTableView];
-                [weakSelf.adapter.deleteArray removeAllObjects];
+                [[_Dao getFolderDao] removeFolders:[weakSelf.adapter.deleteArray copy] async:YES];
+                [weakSelf removeDeleteArrayAndReloadRow];
             } else {
-//                [weakSelf.interactor presentDeleteAlertController:weakSelf.adapter.deleteArray];
-                SMDeleteAlertController *ctr = [SMDeleteAlertController alertControllerWithTitle:@"删除文件夹？" message:@"如果仅删除这一文件夹，其备忘录将移至“备忘录”文件夹。子文件夹也将同时删除。" preferredStyle:UIAlertControllerStyleActionSheet];
+                SMDeleteAlertController *ctr = [SMDeleteAlertController alertControllerWithTitle:@"删除文件夹？"
+                                                                                         message:@"如果仅删除这一文件夹，其备忘录将移至“备忘录”文件夹。子文件夹也将同时删除。"
+                                                                                  preferredStyle:UIAlertControllerStyleActionSheet];
                 ctr.deleteArray = [weakSelf.adapter.deleteArray copy];
                 [ctr deleteAlertActionClick:^(SMDeleteAlertActionType type) {
                     switch (type) {
-                        case SMDeleteAlertActionTypeDeleteFolderAndNotes:
-                            [weakSelf.adapter.adapterArray removeObjectsInArray:weakSelf.adapter.deleteArray];
-                            
+                        case SMDeleteAlertActionTypeDeleteFolderAndNotes: {
                             NSInteger i = 0;
                             for (SMNoteFolderModel *folder in weakSelf.adapter.deleteArray) {
-                                i += folder.number.integerValue;
+                                i += folder.number.integerValue;//计算deleteArray中的备忘录数量
                             }
                             if (i) {
-                                id lastObj = [weakSelf.adapter.adapterArray lastObject];
-                                if ([lastObj isKindOfClass:[SMNoteTrashFolderModel class]]) {
-                                    SMNoteTrashFolderModel *trash = (SMNoteTrashFolderModel *)lastObj;
-                                    trash.number = @(trash.number.integerValue + i);
+                                SMNoteFolderModel *lastObj = [weakSelf.adapter.adapterArray lastObject];
+                                if (0 == lastObj.order.integerValue) {
+                                    lastObj.number = @(lastObj.number.integerValue + i);
                                 } else {
-                                    SMNoteTrashFolderModel *trash = [[SMNoteTrashFolderModel alloc] init];
+                                    SMNoteFolderModel *trash = [[SMNoteFolderModel alloc] init];
                                     trash.title = @"最近删除";
                                     trash.number = @(i);
                                     [weakSelf.adapter.adapterArray addObject:trash];
                                 }
                             }
-                            
-                            [weakSelf.folderView refreshTableView];
-                            [weakSelf.adapter.deleteArray removeAllObjects];
+                            [weakSelf removeDeleteArrayAndReloadRow];
                             
                             break;
+                        }
                         case SMDeleteAlertActionTypeDeleteFolderOnly:
                             
                             break;
@@ -127,7 +120,7 @@
                             break;
                     }
                 }];
-                [self presentViewController:ctr animated:YES completion:nil];
+                [weakSelf presentViewController:ctr animated:YES completion:nil];
             }
         }
     }];
@@ -147,6 +140,19 @@
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
+/** 删除对应行，刷新对应行的cell,Dao层处理数据不在此做 */
+- (void)removeDeleteArrayAndReloadRow {
+    NSMutableArray *deletePathArr = [NSMutableArray arrayWithCapacity:self.adapter.deleteArray.count];
+    for (SMNoteFolderModel *folder in self.adapter.deleteArray) {
+        NSUInteger index = [self.adapter.adapterArray indexOfObject:folder];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+        [deletePathArr addObject:indexPath];
+    }
+    [self.adapter.adapterArray removeObjectsInArray:self.adapter.deleteArray];
+    [self.folderView.dataTableView deleteRowsAtIndexPaths:deletePathArr withRowAnimation:UITableViewRowAnimationRight];
+    [self.adapter.deleteArray removeAllObjects];
+}
+
 - (void)loadDataSource {
     NSMutableArray *dataSource = [NSMutableArray arrayWithCapacity:0];
     
@@ -159,11 +165,13 @@
     [dataSource addObjectsFromArray:folders];
     NSArray *trashMemos = [[_Dao getTrashFolderDao] loadAllTrashMemosFromDB];
     if (trashMemos.count) {
-        SMNoteTrashFolderModel *model = [[SMNoteTrashFolderModel alloc] init];
+        SMNoteFolderModel *model = [[SMNoteFolderModel alloc] init];
+        
+//        SMNoteTrashFolderModel *model = [[SMNoteTrashFolderModel alloc] init];
         model.title = @"最近删除";
         model.number = @(trashMemos.count);
         model.order = @(0);
-        model.menos = trashMemos;
+//        model.menos = trashMemos;
         [dataSource addObject:model];
     }
     
@@ -180,28 +188,35 @@
 }
 
 - (void)popAlertView:(NSString *)tfText {
-    UIAlertController *alertCtr = [UIAlertController alertControllerWithTitle:@"新建文件夹" message:@"请为此文件夹输入名称" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertCtr = [UIAlertController alertControllerWithTitle:@"新建文件夹"
+                                                                      message:@"请为此文件夹输入名称"
+                                                               preferredStyle:UIAlertControllerStyleAlert];
     ATWeakSelf
     [alertCtr addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder = @"名称";
         textField.text = tfText.length ? tfText : @"";
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleTextFieldTextDidChangeNotification:) name:UITextFieldTextDidChangeNotification object:textField];
-//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleTextFieldTextDidEndEditingNotification:) name:UITextFieldTextDidEndEditingNotification object:textField];
-        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(handleTextFieldTextDidChangeNotification:)
+                                                     name:UITextFieldTextDidChangeNotification
+                                                   object:textField];
     }];
-//    alertCtr.textFields.firstObject.text = tfText;
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * _Nonnull action) {
         [weakSelf removeCurrentObserver:alertCtr];
     }];
-    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"存储" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self removeCurrentObserver:alertCtr];
+    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"存储"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+        [weakSelf removeCurrentObserver:alertCtr];
         SMNoteFolderModel *model = [[SMNoteFolderModel alloc] init];
         model.title = alertCtr.textFields.firstObject.text;
         model.number = [NSNumber numberWithUnsignedInteger:0];
         long long timestamp = [[NSDate date] timeIntervalSince1970];
         model.order = [NSNumber numberWithLongLong:timestamp];
         [weakSelf.adapter.adapterArray insertObject:model atIndex:1];
-        [weakSelf.folderView refreshTableView];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
+        [weakSelf.folderView.dataTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
         [[_Dao getFolderDao] insertFolder:model async:YES];
     }];
     sureAction.enabled = NO;
@@ -223,19 +238,15 @@
     _sureAction.enabled = textField.text.length > 0 ? YES : NO;
 }
 
-//- (void)handleTextFieldTextDidEndEditingNotification:(NSNotification *)notification {
-//    ATLog(@"notification:%@",notification);
-//    UITextField *textField = notification.object;
-//    [textField resignFirstResponder];
-//}
-
 #pragma mark - ATTableViewAdapterDelegate
 - (void)didSelectCellData:(id)cellData index:(NSIndexPath *)indexPath
 {
     if ([cellData isKindOfClass:[SMNoteFolderModel class]]) {
-        if ([cellData isKindOfClass:[SMNoteTrashFolderModel class]]) {
+        SMNoteFolderModel *model = (SMNoteFolderModel *)cellData;
+        if (0 == model.order.integerValue) {
             if (!self.folderView.dataTableView.editing) {
                 ATLog(@"废纸篓被点击啦");
+                [self.interactor goToNoteMemoPageNoteFolderModel:cellData];
             }
         } else {
             if (self.folderView.dataTableView.editing) {
@@ -244,13 +255,13 @@
                 [self.bottomView modifyTheBtnEnabledWithDeleteArrCount:self.adapter.deleteArray.count];
             } else {
                 //不处于编辑状态
-                __block SMNoteFolderModel *folderModel = cellData;
+//                __block SMNoteFolderModel *folderModel = cellData;
                 ATWeakSelf
                 [self.interactor returnNoteMemoNumber:^(NSUInteger memoNum) {
-                    if (folderModel.number.integerValue != memoNum) {
-                        folderModel.number = @(memoNum);
-                        [[_Dao getFolderDao] insertFolder:folderModel async:YES];
-                        NSUInteger index = [weakSelf.adapter.adapterArray indexOfObject:folderModel];
+                    if (model.number.integerValue != memoNum && model.order.integerValue != 0) {
+                        model.number = @(memoNum);
+                        [[_Dao getFolderDao] insertFolder:model async:YES];
+                        NSUInteger index = [weakSelf.adapter.adapterArray indexOfObject:model];
                         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
                         [weakSelf.folderView.dataTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
                     }
@@ -258,7 +269,6 @@
                 [self.interactor goToNoteMemoPageNoteFolderModel:cellData];
             }
         }
-        
     }
 }
 
