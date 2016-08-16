@@ -17,8 +17,6 @@
 
 + (instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message preferredStyle:(UIAlertControllerStyle)preferredStyle {
     SMDeleteAlertController *alertCtr = [super alertControllerWithTitle:title message:message preferredStyle:preferredStyle];
-//    if (alertCtr) {
-//    }
     
     return alertCtr;
 }

@@ -109,7 +109,13 @@
     self.navigationItem.rightBarButtonItems = @[self.actionItem];
     model.order = self.foldOrder;
     if (model.contentStr.length) {
-        [[_Dao getMemoDao] insertMemo:model async:YES];
+        if (0 == model.order.integerValue) {
+            [[_Dao getTrashFolderDao] saveTrashMemos:@[model]];
+#warning 在废纸篓中新增的备忘录暂时放在废纸篓表中，下次再转到固定的note表中
+        } else {
+            [[_Dao getMemoDao] insertMemo:model async:YES];
+        }
+        
     }
 }
 

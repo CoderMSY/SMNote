@@ -135,9 +135,14 @@
 }
 
 - (void)loadDataSource {
-    NSArray *memos = [[_Dao getMemoDao] loadAllMemosFromDBWithFolderOrder:self.folderModel.order];
-    NSMutableArray *dataSource = [NSMutableArray arrayWithArray:memos];
-    
+    NSMutableArray *dataSource;
+    if (0 == self.folderModel.order.integerValue) { //废纸篓
+        NSArray *trashs = [[_Dao getTrashFolderDao] loadAllTrashMemosFromDB];
+        dataSource = [NSMutableArray arrayWithArray:trashs];
+    } else {
+        NSArray *memos = [[_Dao getMemoDao] loadAllMemosFromDBWithFolderOrder:self.folderModel.order];
+        dataSource = [NSMutableArray arrayWithArray:memos];
+    }
     self.adapter.adapterArray = dataSource;
     [self.menoView refreshTableView];
     self.bottomView.memoNumber = self.adapter.adapterArray.count;

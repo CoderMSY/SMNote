@@ -87,8 +87,15 @@
 //指定哪些cell可以编辑
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     id model = self.adapterArray[indexPath.row];
-    if ([model isKindOfClass:[ATTitleCellModel class]] || [model isKindOfClass:[SMNoteTrashFolderModel class]]) {
+    if ([model isKindOfClass:[ATTitleCellModel class]]) {
         return NO;
+    } else if ([model isKindOfClass:[SMNoteFolderModel class]]) {
+        SMNoteFolderModel *folder = (SMNoteFolderModel *)model;
+        if (0 == folder.order.integerValue) {
+            return NO;
+        } else {
+            return YES;
+        }
     } else {
         return YES;
     }
