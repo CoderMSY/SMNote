@@ -1,0 +1,1180 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E1272631D5AF3230080F71C /* SMDaoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1272621D5AF3230080F71C /* SMDaoFactory.m */; };
+		7E1272681D5AFC510080F71C /* SMBaseDaoImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1272671D5AFC510080F71C /* SMBaseDaoImpl.m */; };
+		7E12726B1D5B07430080F71C /* SMNoteFolderLogicDaoImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E12726A1D5B07430080F71C /* SMNoteFolderLogicDaoImpl.m */; };
+		7E4045311D5D68D900C1CC6E /* SMNoteDetailBottomToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4045301D5D68D900C1CC6E /* SMNoteDetailBottomToolBar.m */; };
+		7E4045351D5DB52C00C1CC6E /* SMNoteDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4045341D5DB52C00C1CC6E /* SMNoteDetailModel.m */; };
+		7E4045391D5DB88900C1CC6E /* NSString+ATConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4045381D5DB88900C1CC6E /* NSString+ATConverter.m */; };
+		7E427DD01D5C825500913B0E /* SMNoteFolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DB71D5C825500913B0E /* SMNoteFolderCell.m */; };
+		7E427DD11D5C825500913B0E /* SMNoteFolderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DBA1D5C825500913B0E /* SMNoteFolderModel.m */; };
+		7E427DD21D5C825500913B0E /* SMNoteFolderAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DBC1D5C825500913B0E /* SMNoteFolderAdapter.m */; };
+		7E427DD31D5C825500913B0E /* SMNoteFolderBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DBE1D5C825500913B0E /* SMNoteFolderBottomView.m */; };
+		7E427DD41D5C825500913B0E /* SMNoteFolderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DC01D5C825500913B0E /* SMNoteFolderController.m */; };
+		7E427DD51D5C825500913B0E /* SMNoteFolderInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DC21D5C825500913B0E /* SMNoteFolderInteractor.m */; };
+		7E427DD61D5C825500913B0E /* SMNoteFolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DC41D5C825500913B0E /* SMNoteFolderView.m */; };
+		7E427DD71D5C825500913B0E /* SMNoteMemoAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DC71D5C825500913B0E /* SMNoteMemoAdapter.m */; };
+		7E427DD81D5C825500913B0E /* SMNoteMemoBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DC91D5C825500913B0E /* SMNoteMemoBottomView.m */; };
+		7E427DD91D5C825500913B0E /* SMNoteMemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DCB1D5C825500913B0E /* SMNoteMemoController.m */; };
+		7E427DDA1D5C825500913B0E /* SMNoteMemoInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DCD1D5C825500913B0E /* SMNoteMemoInteractor.m */; };
+		7E427DDB1D5C825500913B0E /* SMNoteMemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DCF1D5C825500913B0E /* SMNoteMemoView.m */; };
+		7E427DDE1D5C827C00913B0E /* SMNoteDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DDD1D5C827C00913B0E /* SMNoteDetailController.m */; };
+		7E427DE41D5C83D100913B0E /* SMNoteDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DE31D5C83D100913B0E /* SMNoteDetailView.m */; };
+		7E427DE81D5C85D700913B0E /* ATTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427DE71D5C85D700913B0E /* ATTextView.m */; };
+		7E5F78B81D61700B0089A559 /* SMNoteTrashFolderLogicDaoImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F78B71D61700B0089A559 /* SMNoteTrashFolderLogicDaoImpl.m */; };
+		7E5F78BD1D61B0E90089A559 /* SMDeleteAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F78BC1D61B0E90089A559 /* SMDeleteAlertController.m */; };
+		7E7EB5401D5F10D500DC208E /* SMDaoNotificationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EB53F1D5F10D500DC208E /* SMDaoNotificationUtil.m */; };
+		7E7EB5451D5F159D00DC208E /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EB5441D5F159D00DC208E /* UIViewController+BackButtonHandler.m */; };
+		7E982FA71D5E01E700217F41 /* SMNoteMemoLogicDaoImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E982FA61D5E01E700217F41 /* SMNoteMemoLogicDaoImpl.m */; };
+		7E982FAA1D5E0EA400217F41 /* SMNoteMemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E982FA91D5E0EA400217F41 /* SMNoteMemoCell.m */; };
+		7ECD94F11D59C58500C93B04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD94F01D59C58500C93B04 /* main.m */; };
+		7ECD94F41D59C58500C93B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD94F31D59C58500C93B04 /* AppDelegate.m */; };
+		7ECD94F71D59C58500C93B04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD94F61D59C58500C93B04 /* ViewController.m */; };
+		7ECD94FA1D59C58500C93B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD94F81D59C58500C93B04 /* Main.storyboard */; };
+		7ECD94FC1D59C58500C93B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD94FB1D59C58500C93B04 /* Assets.xcassets */; };
+		7ECD94FF1D59C58500C93B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD94FD1D59C58500C93B04 /* LaunchScreen.storyboard */; };
+		7ECD950A1D59C58500C93B04 /* SMNoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95091D59C58500C93B04 /* SMNoteTests.m */; };
+		7ECD95151D59C58500C93B04 /* SMNoteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95141D59C58500C93B04 /* SMNoteUITests.m */; };
+		7ECD95531D59CE0200C93B04 /* ATInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95251D59CE0200C93B04 /* ATInteractor.m */; };
+		7ECD95541D59CE0200C93B04 /* ATTableViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95271D59CE0200C93B04 /* ATTableViewAdapter.m */; };
+		7ECD95551D59CE0200C93B04 /* ATCommonCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD952B1D59CE0200C93B04 /* ATCommonCellModel.m */; };
+		7ECD95561D59CE0200C93B04 /* ATTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD952F1D59CE0200C93B04 /* ATTableView.m */; };
+		7ECD95571D59CE0200C93B04 /* ATEmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95321D59CE0200C93B04 /* ATEmptyCell.m */; };
+		7ECD95581D59CE0200C93B04 /* ATTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95341D59CE0200C93B04 /* ATTableViewCell.m */; };
+		7ECD95591D59CE0200C93B04 /* AppInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95381D59CE0200C93B04 /* AppInteractor.m */; };
+		7ECD955A1D59CE0200C93B04 /* UIButton+AtCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95431D59CE0200C93B04 /* UIButton+AtCreate.m */; };
+		7ECD955B1D59CE0200C93B04 /* UIColor+ATHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95461D59CE0200C93B04 /* UIColor+ATHex.m */; };
+		7ECD955C1D59CE0200C93B04 /* UILabel+ATCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95491D59CE0200C93B04 /* UILabel+ATCreate.m */; };
+		7ECD955D1D59CE0200C93B04 /* UILabel+ATLabelHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD954B1D59CE0200C93B04 /* UILabel+ATLabelHeight.m */; };
+		7ECD955E1D59CE0200C93B04 /* UITableViewCell+DD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD954E1D59CE0200C93B04 /* UITableViewCell+DD.m */; };
+		7ECD955F1D59CE0200C93B04 /* UIView+ATExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95511D59CE0200C93B04 /* UIView+ATExtension.m */; };
+		7ECD95621D59CE8500C93B04 /* ATBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95611D59CE8500C93B04 /* ATBaseController.m */; };
+		7ECD95761D59D4E200C93B04 /* ATBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95751D59D4E200C93B04 /* ATBaseModel.m */; };
+		7ECD95801D59D9D300C93B04 /* ATNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD957F1D59D9D300C93B04 /* ATNavigationController.m */; };
+		7ECD95841D59DAE600C93B04 /* UIBarButtonItem+ATExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD95831D59DAE600C93B04 /* UIBarButtonItem+ATExtension.m */; };
+		EA2B9A408B26AB9CE9AAA6DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D714144C7D8E1F84D6316AFA /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7ECD95061D59C58500C93B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ECD94E41D59C58500C93B04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7ECD94EB1D59C58500C93B04;
+			remoteInfo = SMNote;
+		};
+		7ECD95111D59C58500C93B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ECD94E41D59C58500C93B04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7ECD94EB1D59C58500C93B04;
+			remoteInfo = SMNote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42E0FD0404C9D9FDEDE4FDFF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		64CBC93A83CF192C284754C4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7E1272611D5AF3230080F71C /* SMDaoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDaoFactory.h; sourceTree = "<group>"; };
+		7E1272621D5AF3230080F71C /* SMDaoFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMDaoFactory.m; sourceTree = "<group>"; };
+		7E1272651D5AF5970080F71C /* SMSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSingleton.h; sourceTree = "<group>"; };
+		7E1272661D5AFC510080F71C /* SMBaseDaoImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBaseDaoImpl.h; sourceTree = "<group>"; };
+		7E1272671D5AFC510080F71C /* SMBaseDaoImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBaseDaoImpl.m; sourceTree = "<group>"; };
+		7E1272691D5B07430080F71C /* SMNoteFolderLogicDaoImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteFolderLogicDaoImpl.h; sourceTree = "<group>"; };
+		7E12726A1D5B07430080F71C /* SMNoteFolderLogicDaoImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteFolderLogicDaoImpl.m; sourceTree = "<group>"; };
+		7E12726C1D5B07700080F71C /* SMNoteFolderLogicDaoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteFolderLogicDaoProtocol.h; sourceTree = "<group>"; };
+		7E40452F1D5D68D900C1CC6E /* SMNoteDetailBottomToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteDetailBottomToolBar.h; sourceTree = "<group>"; };
+		7E4045301D5D68D900C1CC6E /* SMNoteDetailBottomToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteDetailBottomToolBar.m; sourceTree = "<group>"; };
+		7E4045331D5DB52C00C1CC6E /* SMNoteDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteDetailModel.h; sourceTree = "<group>"; };
+		7E4045341D5DB52C00C1CC6E /* SMNoteDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteDetailModel.m; sourceTree = "<group>"; };
+		7E4045371D5DB88900C1CC6E /* NSString+ATConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ATConverter.h"; sourceTree = "<group>"; };
+		7E4045381D5DB88900C1CC6E /* NSString+ATConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ATConverter.m"; sourceTree = "<group>"; };
+		7E427DB61D5C825500913B0E /* SMNoteFolderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteFolderCell.h; sourceTree = "<group>"; };
+		7E427DB71D5C825500913B0E /* SMNoteFolderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteFolderCell.m; sourceTree = "<group>"; };
+		7E427DB91D5C825500913B0E /* SMNoteFolderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteFolderModel.h; sourceTree = "<group>"; };
+		7E427DBA1D5C825500913B0E /* SMNoteFolderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteFolderModel.m; sourceTree = "<group>"; };
+		7E427DBB1D5C825500913B0E /* SMNoteFolderAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteFolderAdapter.h; sourceTree = "<group>"; };
+		7E427DBC1D5C825500913B0E /* SMNoteFolderAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteFolderAdapter.m; sourceTree = "<group>"; };
+		7E427DBD1D5C825500913B0E /* SMNoteFolderBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteFolderBottomView.h; sourceTree = "<group>"; };
+		7E427DBE1D5C825500913B0E /* SMNoteFolderBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteFolderBottomView.m; sourceTree = "<group>"; };
+		7E427DBF1D5C825500913B0E /* SMNoteFolderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteFolderController.h; sourceTree = "<group>"; };
+		7E427DC01D5C825500913B0E /* SMNoteFolderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteFolderController.m; sourceTree = "<group>"; };
+		7E427DC11D5C825500913B0E /* SMNoteFolderInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteFolderInteractor.h; sourceTree = "<group>"; };
+		7E427DC21D5C825500913B0E /* SMNoteFolderInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteFolderInteractor.m; sourceTree = "<group>"; };
+		7E427DC31D5C825500913B0E /* SMNoteFolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteFolderView.h; sourceTree = "<group>"; };
+		7E427DC41D5C825500913B0E /* SMNoteFolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteFolderView.m; sourceTree = "<group>"; };
+		7E427DC61D5C825500913B0E /* SMNoteMemoAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteMemoAdapter.h; sourceTree = "<group>"; };
+		7E427DC71D5C825500913B0E /* SMNoteMemoAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteMemoAdapter.m; sourceTree = "<group>"; };
+		7E427DC81D5C825500913B0E /* SMNoteMemoBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteMemoBottomView.h; sourceTree = "<group>"; };
+		7E427DC91D5C825500913B0E /* SMNoteMemoBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteMemoBottomView.m; sourceTree = "<group>"; };
+		7E427DCA1D5C825500913B0E /* SMNoteMemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteMemoController.h; sourceTree = "<group>"; };
+		7E427DCB1D5C825500913B0E /* SMNoteMemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteMemoController.m; sourceTree = "<group>"; };
+		7E427DCC1D5C825500913B0E /* SMNoteMemoInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteMemoInteractor.h; sourceTree = "<group>"; };
+		7E427DCD1D5C825500913B0E /* SMNoteMemoInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteMemoInteractor.m; sourceTree = "<group>"; };
+		7E427DCE1D5C825500913B0E /* SMNoteMemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteMemoView.h; sourceTree = "<group>"; };
+		7E427DCF1D5C825500913B0E /* SMNoteMemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteMemoView.m; sourceTree = "<group>"; };
+		7E427DDC1D5C827C00913B0E /* SMNoteDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteDetailController.h; sourceTree = "<group>"; };
+		7E427DDD1D5C827C00913B0E /* SMNoteDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteDetailController.m; sourceTree = "<group>"; };
+		7E427DE21D5C83D100913B0E /* SMNoteDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteDetailView.h; sourceTree = "<group>"; };
+		7E427DE31D5C83D100913B0E /* SMNoteDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteDetailView.m; sourceTree = "<group>"; };
+		7E427DE61D5C85D700913B0E /* ATTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTextView.h; sourceTree = "<group>"; };
+		7E427DE71D5C85D700913B0E /* ATTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATTextView.m; sourceTree = "<group>"; };
+		7E5F78B61D61700B0089A559 /* SMNoteTrashFolderLogicDaoImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteTrashFolderLogicDaoImpl.h; sourceTree = "<group>"; };
+		7E5F78B71D61700B0089A559 /* SMNoteTrashFolderLogicDaoImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteTrashFolderLogicDaoImpl.m; sourceTree = "<group>"; };
+		7E5F78B91D61970A0089A559 /* SMNoteTrashFolderLogicDaoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteTrashFolderLogicDaoProtocol.h; sourceTree = "<group>"; };
+		7E5F78BB1D61B0E90089A559 /* SMDeleteAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDeleteAlertController.h; sourceTree = "<group>"; };
+		7E5F78BC1D61B0E90089A559 /* SMDeleteAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMDeleteAlertController.m; sourceTree = "<group>"; };
+		7E7EB53E1D5F10D500DC208E /* SMDaoNotificationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDaoNotificationUtil.h; sourceTree = "<group>"; };
+		7E7EB53F1D5F10D500DC208E /* SMDaoNotificationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMDaoNotificationUtil.m; sourceTree = "<group>"; };
+		7E7EB5411D5F125B00DC208E /* SMSharedNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSharedNotification.h; sourceTree = "<group>"; };
+		7E7EB5431D5F159D00DC208E /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		7E7EB5441D5F159D00DC208E /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		7E982FA41D5E014700217F41 /* SMNoteMemoLogicDaoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteMemoLogicDaoProtocol.h; sourceTree = "<group>"; };
+		7E982FA51D5E01E700217F41 /* SMNoteMemoLogicDaoImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteMemoLogicDaoImpl.h; sourceTree = "<group>"; };
+		7E982FA61D5E01E700217F41 /* SMNoteMemoLogicDaoImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteMemoLogicDaoImpl.m; sourceTree = "<group>"; };
+		7E982FA81D5E0EA400217F41 /* SMNoteMemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNoteMemoCell.h; sourceTree = "<group>"; };
+		7E982FA91D5E0EA400217F41 /* SMNoteMemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNoteMemoCell.m; sourceTree = "<group>"; };
+		7ECD94EC1D59C58500C93B04 /* SMNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ECD94F01D59C58500C93B04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7ECD94F21D59C58500C93B04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7ECD94F31D59C58500C93B04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7ECD94F51D59C58500C93B04 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7ECD94F61D59C58500C93B04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7ECD94F91D59C58500C93B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7ECD94FB1D59C58500C93B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7ECD94FE1D59C58500C93B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7ECD95001D59C58500C93B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ECD95051D59C58500C93B04 /* SMNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ECD95091D59C58500C93B04 /* SMNoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMNoteTests.m; sourceTree = "<group>"; };
+		7ECD950B1D59C58500C93B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ECD95101D59C58500C93B04 /* SMNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ECD95141D59C58500C93B04 /* SMNoteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMNoteUITests.m; sourceTree = "<group>"; };
+		7ECD95161D59C58500C93B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ECD95241D59CE0200C93B04 /* ATInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATInteractor.h; sourceTree = "<group>"; };
+		7ECD95251D59CE0200C93B04 /* ATInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATInteractor.m; sourceTree = "<group>"; };
+		7ECD95261D59CE0200C93B04 /* ATTableViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTableViewAdapter.h; sourceTree = "<group>"; };
+		7ECD95271D59CE0200C93B04 /* ATTableViewAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATTableViewAdapter.m; sourceTree = "<group>"; };
+		7ECD952A1D59CE0200C93B04 /* ATCommonCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCommonCellModel.h; sourceTree = "<group>"; };
+		7ECD952B1D59CE0200C93B04 /* ATCommonCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCommonCellModel.m; sourceTree = "<group>"; };
+		7ECD952E1D59CE0200C93B04 /* ATTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTableView.h; sourceTree = "<group>"; };
+		7ECD952F1D59CE0200C93B04 /* ATTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATTableView.m; sourceTree = "<group>"; };
+		7ECD95311D59CE0200C93B04 /* ATEmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATEmptyCell.h; sourceTree = "<group>"; };
+		7ECD95321D59CE0200C93B04 /* ATEmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATEmptyCell.m; sourceTree = "<group>"; };
+		7ECD95331D59CE0200C93B04 /* ATTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTableViewCell.h; sourceTree = "<group>"; };
+		7ECD95341D59CE0200C93B04 /* ATTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATTableViewCell.m; sourceTree = "<group>"; };
+		7ECD95371D59CE0200C93B04 /* AppInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInteractor.h; sourceTree = "<group>"; };
+		7ECD95381D59CE0200C93B04 /* AppInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInteractor.m; sourceTree = "<group>"; };
+		7ECD953A1D59CE0200C93B04 /* SharedConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedConfig.h; sourceTree = "<group>"; };
+		7ECD953B1D59CE0200C93B04 /* SharedMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedMacro.h; sourceTree = "<group>"; };
+		7ECD95421D59CE0200C93B04 /* UIButton+AtCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AtCreate.h"; sourceTree = "<group>"; };
+		7ECD95431D59CE0200C93B04 /* UIButton+AtCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AtCreate.m"; sourceTree = "<group>"; };
+		7ECD95451D59CE0200C93B04 /* UIColor+ATHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ATHex.h"; sourceTree = "<group>"; };
+		7ECD95461D59CE0200C93B04 /* UIColor+ATHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ATHex.m"; sourceTree = "<group>"; };
+		7ECD95481D59CE0200C93B04 /* UILabel+ATCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ATCreate.h"; sourceTree = "<group>"; };
+		7ECD95491D59CE0200C93B04 /* UILabel+ATCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ATCreate.m"; sourceTree = "<group>"; };
+		7ECD954A1D59CE0200C93B04 /* UILabel+ATLabelHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ATLabelHeight.h"; sourceTree = "<group>"; };
+		7ECD954B1D59CE0200C93B04 /* UILabel+ATLabelHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ATLabelHeight.m"; sourceTree = "<group>"; };
+		7ECD954D1D59CE0200C93B04 /* UITableViewCell+DD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+DD.h"; sourceTree = "<group>"; };
+		7ECD954E1D59CE0200C93B04 /* UITableViewCell+DD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+DD.m"; sourceTree = "<group>"; };
+		7ECD95501D59CE0200C93B04 /* UIView+ATExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ATExtension.h"; sourceTree = "<group>"; };
+		7ECD95511D59CE0200C93B04 /* UIView+ATExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ATExtension.m"; sourceTree = "<group>"; };
+		7ECD95601D59CE8400C93B04 /* ATBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATBaseController.h; sourceTree = "<group>"; };
+		7ECD95611D59CE8500C93B04 /* ATBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATBaseController.m; sourceTree = "<group>"; };
+		7ECD95721D59D0D900C93B04 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7ECD95741D59D4E200C93B04 /* ATBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATBaseModel.h; sourceTree = "<group>"; };
+		7ECD95751D59D4E200C93B04 /* ATBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATBaseModel.m; sourceTree = "<group>"; };
+		7ECD957E1D59D9D300C93B04 /* ATNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNavigationController.h; sourceTree = "<group>"; };
+		7ECD957F1D59D9D300C93B04 /* ATNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNavigationController.m; sourceTree = "<group>"; };
+		7ECD95821D59DAE600C93B04 /* UIBarButtonItem+ATExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ATExtension.h"; sourceTree = "<group>"; };
+		7ECD95831D59DAE600C93B04 /* UIBarButtonItem+ATExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ATExtension.m"; sourceTree = "<group>"; };
+		D714144C7D8E1F84D6316AFA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7ECD94E91D59C58500C93B04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2B9A408B26AB9CE9AAA6DE /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ECD95021D59C58500C93B04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ECD950D1D59C58500C93B04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E12725A1D5AF3090080F71C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				7E12725B1D5AF3090080F71C /* DAO */,
+				7E12725E1D5AF3090080F71C /* Service */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		7E12725B1D5AF3090080F71C /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				7E12725C1D5AF3090080F71C /* DaoImpl */,
+				7E12725D1D5AF3090080F71C /* DaoProtocols */,
+				7E1272611D5AF3230080F71C /* SMDaoFactory.h */,
+				7E1272621D5AF3230080F71C /* SMDaoFactory.m */,
+				7E1272661D5AFC510080F71C /* SMBaseDaoImpl.h */,
+				7E1272671D5AFC510080F71C /* SMBaseDaoImpl.m */,
+				7E7EB53E1D5F10D500DC208E /* SMDaoNotificationUtil.h */,
+				7E7EB53F1D5F10D500DC208E /* SMDaoNotificationUtil.m */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		7E12725C1D5AF3090080F71C /* DaoImpl */ = {
+			isa = PBXGroup;
+			children = (
+				7E1272691D5B07430080F71C /* SMNoteFolderLogicDaoImpl.h */,
+				7E12726A1D5B07430080F71C /* SMNoteFolderLogicDaoImpl.m */,
+				7E982FA51D5E01E700217F41 /* SMNoteMemoLogicDaoImpl.h */,
+				7E982FA61D5E01E700217F41 /* SMNoteMemoLogicDaoImpl.m */,
+				7E5F78B61D61700B0089A559 /* SMNoteTrashFolderLogicDaoImpl.h */,
+				7E5F78B71D61700B0089A559 /* SMNoteTrashFolderLogicDaoImpl.m */,
+			);
+			path = DaoImpl;
+			sourceTree = "<group>";
+		};
+		7E12725D1D5AF3090080F71C /* DaoProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				7E12726C1D5B07700080F71C /* SMNoteFolderLogicDaoProtocol.h */,
+				7E982FA41D5E014700217F41 /* SMNoteMemoLogicDaoProtocol.h */,
+				7E5F78B91D61970A0089A559 /* SMNoteTrashFolderLogicDaoProtocol.h */,
+			);
+			path = DaoProtocols;
+			sourceTree = "<group>";
+		};
+		7E12725E1D5AF3090080F71C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7E12725F1D5AF3090080F71C /* ServiceImpl */,
+				7E1272601D5AF3090080F71C /* ServiceProtocols */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7E12725F1D5AF3090080F71C /* ServiceImpl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceImpl;
+			sourceTree = "<group>";
+		};
+		7E1272601D5AF3090080F71C /* ServiceProtocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceProtocols;
+			sourceTree = "<group>";
+		};
+		7E4045321D5DB51B00C1CC6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E4045331D5DB52C00C1CC6E /* SMNoteDetailModel.h */,
+				7E4045341D5DB52C00C1CC6E /* SMNoteDetailModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E4045361D5DB88900C1CC6E /* NSString+ */ = {
+			isa = PBXGroup;
+			children = (
+				7E4045371D5DB88900C1CC6E /* NSString+ATConverter.h */,
+				7E4045381D5DB88900C1CC6E /* NSString+ATConverter.m */,
+			);
+			path = "NSString+";
+			sourceTree = "<group>";
+		};
+		7E427DB21D5C825500913B0E /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				7E427DB41D5C825500913B0E /* NoteFolder */,
+				7E427DC51D5C825500913B0E /* NoteMemo */,
+				7E427DB31D5C825500913B0E /* NoteDetail */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		7E427DB31D5C825500913B0E /* NoteDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7E427DDC1D5C827C00913B0E /* SMNoteDetailController.h */,
+				7E427DDD1D5C827C00913B0E /* SMNoteDetailController.m */,
+				7E427DE21D5C83D100913B0E /* SMNoteDetailView.h */,
+				7E427DE31D5C83D100913B0E /* SMNoteDetailView.m */,
+				7E40452F1D5D68D900C1CC6E /* SMNoteDetailBottomToolBar.h */,
+				7E4045301D5D68D900C1CC6E /* SMNoteDetailBottomToolBar.m */,
+				7E4045321D5DB51B00C1CC6E /* Model */,
+			);
+			path = NoteDetail;
+			sourceTree = "<group>";
+		};
+		7E427DB41D5C825500913B0E /* NoteFolder */ = {
+			isa = PBXGroup;
+			children = (
+				7E427DBF1D5C825500913B0E /* SMNoteFolderController.h */,
+				7E427DC01D5C825500913B0E /* SMNoteFolderController.m */,
+				7E427DC31D5C825500913B0E /* SMNoteFolderView.h */,
+				7E427DC41D5C825500913B0E /* SMNoteFolderView.m */,
+				7E427DBB1D5C825500913B0E /* SMNoteFolderAdapter.h */,
+				7E427DBC1D5C825500913B0E /* SMNoteFolderAdapter.m */,
+				7E427DC11D5C825500913B0E /* SMNoteFolderInteractor.h */,
+				7E427DC21D5C825500913B0E /* SMNoteFolderInteractor.m */,
+				7E427DBD1D5C825500913B0E /* SMNoteFolderBottomView.h */,
+				7E427DBE1D5C825500913B0E /* SMNoteFolderBottomView.m */,
+				7E427DB51D5C825500913B0E /* Cell */,
+				7E427DB81D5C825500913B0E /* Model */,
+				7E5F78BA1D61B0CE0089A559 /* SMDeleteAlertController */,
+			);
+			path = NoteFolder;
+			sourceTree = "<group>";
+		};
+		7E427DB51D5C825500913B0E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7E427DB61D5C825500913B0E /* SMNoteFolderCell.h */,
+				7E427DB71D5C825500913B0E /* SMNoteFolderCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7E427DB81D5C825500913B0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E427DB91D5C825500913B0E /* SMNoteFolderModel.h */,
+				7E427DBA1D5C825500913B0E /* SMNoteFolderModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E427DC51D5C825500913B0E /* NoteMemo */ = {
+			isa = PBXGroup;
+			children = (
+				7E427DCA1D5C825500913B0E /* SMNoteMemoController.h */,
+				7E427DCB1D5C825500913B0E /* SMNoteMemoController.m */,
+				7E427DCE1D5C825500913B0E /* SMNoteMemoView.h */,
+				7E427DCF1D5C825500913B0E /* SMNoteMemoView.m */,
+				7E427DC61D5C825500913B0E /* SMNoteMemoAdapter.h */,
+				7E427DC71D5C825500913B0E /* SMNoteMemoAdapter.m */,
+				7E427DCC1D5C825500913B0E /* SMNoteMemoInteractor.h */,
+				7E427DCD1D5C825500913B0E /* SMNoteMemoInteractor.m */,
+				7E427DC81D5C825500913B0E /* SMNoteMemoBottomView.h */,
+				7E427DC91D5C825500913B0E /* SMNoteMemoBottomView.m */,
+				7E982FA81D5E0EA400217F41 /* SMNoteMemoCell.h */,
+				7E982FA91D5E0EA400217F41 /* SMNoteMemoCell.m */,
+			);
+			path = NoteMemo;
+			sourceTree = "<group>";
+		};
+		7E427DE51D5C85D700913B0E /* ATTextView */ = {
+			isa = PBXGroup;
+			children = (
+				7E427DE61D5C85D700913B0E /* ATTextView.h */,
+				7E427DE71D5C85D700913B0E /* ATTextView.m */,
+			);
+			path = ATTextView;
+			sourceTree = "<group>";
+		};
+		7E5F78BA1D61B0CE0089A559 /* SMDeleteAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F78BB1D61B0E90089A559 /* SMDeleteAlertController.h */,
+				7E5F78BC1D61B0E90089A559 /* SMDeleteAlertController.m */,
+			);
+			path = SMDeleteAlertController;
+			sourceTree = "<group>";
+		};
+		7E7EB5421D5F159D00DC208E /* UIViewController+ */ = {
+			isa = PBXGroup;
+			children = (
+				7E7EB5431D5F159D00DC208E /* UIViewController+BackButtonHandler.h */,
+				7E7EB5441D5F159D00DC208E /* UIViewController+BackButtonHandler.m */,
+			);
+			path = "UIViewController+";
+			sourceTree = "<group>";
+		};
+		7ECD94E31D59C58500C93B04 = {
+			isa = PBXGroup;
+			children = (
+				7ECD94EE1D59C58500C93B04 /* SMNote */,
+				7ECD95081D59C58500C93B04 /* SMNoteTests */,
+				7ECD95131D59C58500C93B04 /* SMNoteUITests */,
+				7ECD94ED1D59C58500C93B04 /* Products */,
+				FE3A5F91FFCDDA56BA8AED72 /* Pods */,
+				ADA59C76974FF795CF896CD9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7ECD94ED1D59C58500C93B04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD94EC1D59C58500C93B04 /* SMNote.app */,
+				7ECD95051D59C58500C93B04 /* SMNoteTests.xctest */,
+				7ECD95101D59C58500C93B04 /* SMNoteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7ECD94EE1D59C58500C93B04 /* SMNote */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD94F21D59C58500C93B04 /* AppDelegate.h */,
+				7ECD94F31D59C58500C93B04 /* AppDelegate.m */,
+				7ECD95221D59CE0200C93B04 /* Common */,
+				7ECD95351D59CE0200C93B04 /* Core */,
+				7E12725A1D5AF3090080F71C /* Factory */,
+				7E427DB21D5C825500913B0E /* Feature */,
+				7ECD953F1D59CE0200C93B04 /* Legacy */,
+				7ECD94F51D59C58500C93B04 /* ViewController.h */,
+				7ECD94F61D59C58500C93B04 /* ViewController.m */,
+				7ECD94F81D59C58500C93B04 /* Main.storyboard */,
+				7ECD94FB1D59C58500C93B04 /* Assets.xcassets */,
+				7ECD94FD1D59C58500C93B04 /* LaunchScreen.storyboard */,
+				7ECD95001D59C58500C93B04 /* Info.plist */,
+				7ECD94EF1D59C58500C93B04 /* Supporting Files */,
+			);
+			path = SMNote;
+			sourceTree = "<group>";
+		};
+		7ECD94EF1D59C58500C93B04 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD94F01D59C58500C93B04 /* main.m */,
+				7ECD95721D59D0D900C93B04 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7ECD95081D59C58500C93B04 /* SMNoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95091D59C58500C93B04 /* SMNoteTests.m */,
+				7ECD950B1D59C58500C93B04 /* Info.plist */,
+			);
+			path = SMNoteTests;
+			sourceTree = "<group>";
+		};
+		7ECD95131D59C58500C93B04 /* SMNoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95141D59C58500C93B04 /* SMNoteUITests.m */,
+				7ECD95161D59C58500C93B04 /* Info.plist */,
+			);
+			path = SMNoteUITests;
+			sourceTree = "<group>";
+		};
+		7ECD95221D59CE0200C93B04 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95231D59CE0200C93B04 /* SharedLogic */,
+				7ECD95281D59CE0200C93B04 /* SharedModel */,
+				7ECD952C1D59CE0200C93B04 /* SharedUI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7ECD95231D59CE0200C93B04 /* SharedLogic */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95241D59CE0200C93B04 /* ATInteractor.h */,
+				7ECD95251D59CE0200C93B04 /* ATInteractor.m */,
+				7ECD95261D59CE0200C93B04 /* ATTableViewAdapter.h */,
+				7ECD95271D59CE0200C93B04 /* ATTableViewAdapter.m */,
+				7ECD95601D59CE8400C93B04 /* ATBaseController.h */,
+				7ECD95611D59CE8500C93B04 /* ATBaseController.m */,
+				7ECD957E1D59D9D300C93B04 /* ATNavigationController.h */,
+				7ECD957F1D59D9D300C93B04 /* ATNavigationController.m */,
+			);
+			path = SharedLogic;
+			sourceTree = "<group>";
+		};
+		7ECD95281D59CE0200C93B04 /* SharedModel */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95291D59CE0200C93B04 /* ATTableViewCellModel */,
+				7ECD95741D59D4E200C93B04 /* ATBaseModel.h */,
+				7ECD95751D59D4E200C93B04 /* ATBaseModel.m */,
+			);
+			path = SharedModel;
+			sourceTree = "<group>";
+		};
+		7ECD95291D59CE0200C93B04 /* ATTableViewCellModel */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD952A1D59CE0200C93B04 /* ATCommonCellModel.h */,
+				7ECD952B1D59CE0200C93B04 /* ATCommonCellModel.m */,
+			);
+			path = ATTableViewCellModel;
+			sourceTree = "<group>";
+		};
+		7ECD952C1D59CE0200C93B04 /* SharedUI */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD952D1D59CE0200C93B04 /* ATTableView */,
+				7ECD95301D59CE0200C93B04 /* ATTableViewCell */,
+				7E427DE51D5C85D700913B0E /* ATTextView */,
+			);
+			path = SharedUI;
+			sourceTree = "<group>";
+		};
+		7ECD952D1D59CE0200C93B04 /* ATTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD952E1D59CE0200C93B04 /* ATTableView.h */,
+				7ECD952F1D59CE0200C93B04 /* ATTableView.m */,
+			);
+			path = ATTableView;
+			sourceTree = "<group>";
+		};
+		7ECD95301D59CE0200C93B04 /* ATTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95311D59CE0200C93B04 /* ATEmptyCell.h */,
+				7ECD95321D59CE0200C93B04 /* ATEmptyCell.m */,
+				7ECD95331D59CE0200C93B04 /* ATTableViewCell.h */,
+				7ECD95341D59CE0200C93B04 /* ATTableViewCell.m */,
+			);
+			path = ATTableViewCell;
+			sourceTree = "<group>";
+		};
+		7ECD95351D59CE0200C93B04 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95361D59CE0200C93B04 /* AppTask */,
+				7ECD95391D59CE0200C93B04 /* Configure_h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7ECD95361D59CE0200C93B04 /* AppTask */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95371D59CE0200C93B04 /* AppInteractor.h */,
+				7ECD95381D59CE0200C93B04 /* AppInteractor.m */,
+			);
+			path = AppTask;
+			sourceTree = "<group>";
+		};
+		7ECD95391D59CE0200C93B04 /* Configure_h */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD953A1D59CE0200C93B04 /* SharedConfig.h */,
+				7ECD953B1D59CE0200C93B04 /* SharedMacro.h */,
+				7E1272651D5AF5970080F71C /* SMSingleton.h */,
+				7E7EB5411D5F125B00DC208E /* SMSharedNotification.h */,
+			);
+			path = Configure_h;
+			sourceTree = "<group>";
+		};
+		7ECD953F1D59CE0200C93B04 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95401D59CE0200C93B04 /* Category */,
+				7ECD95521D59CE0200C93B04 /* Utils */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		7ECD95401D59CE0200C93B04 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7E4045361D5DB88900C1CC6E /* NSString+ */,
+				7ECD95811D59DAE600C93B04 /* UIBarButtonItem+ */,
+				7ECD95411D59CE0200C93B04 /* UIButton+ */,
+				7ECD95441D59CE0200C93B04 /* UIColor+ */,
+				7ECD95471D59CE0200C93B04 /* UILabel+ */,
+				7ECD954C1D59CE0200C93B04 /* UITableViewCell+ */,
+				7ECD954F1D59CE0200C93B04 /* UIView+ */,
+				7E7EB5421D5F159D00DC208E /* UIViewController+ */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7ECD95411D59CE0200C93B04 /* UIButton+ */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95421D59CE0200C93B04 /* UIButton+AtCreate.h */,
+				7ECD95431D59CE0200C93B04 /* UIButton+AtCreate.m */,
+			);
+			path = "UIButton+";
+			sourceTree = "<group>";
+		};
+		7ECD95441D59CE0200C93B04 /* UIColor+ */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95451D59CE0200C93B04 /* UIColor+ATHex.h */,
+				7ECD95461D59CE0200C93B04 /* UIColor+ATHex.m */,
+			);
+			path = "UIColor+";
+			sourceTree = "<group>";
+		};
+		7ECD95471D59CE0200C93B04 /* UILabel+ */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95481D59CE0200C93B04 /* UILabel+ATCreate.h */,
+				7ECD95491D59CE0200C93B04 /* UILabel+ATCreate.m */,
+				7ECD954A1D59CE0200C93B04 /* UILabel+ATLabelHeight.h */,
+				7ECD954B1D59CE0200C93B04 /* UILabel+ATLabelHeight.m */,
+			);
+			path = "UILabel+";
+			sourceTree = "<group>";
+		};
+		7ECD954C1D59CE0200C93B04 /* UITableViewCell+ */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD954D1D59CE0200C93B04 /* UITableViewCell+DD.h */,
+				7ECD954E1D59CE0200C93B04 /* UITableViewCell+DD.m */,
+			);
+			path = "UITableViewCell+";
+			sourceTree = "<group>";
+		};
+		7ECD954F1D59CE0200C93B04 /* UIView+ */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95501D59CE0200C93B04 /* UIView+ATExtension.h */,
+				7ECD95511D59CE0200C93B04 /* UIView+ATExtension.m */,
+			);
+			path = "UIView+";
+			sourceTree = "<group>";
+		};
+		7ECD95521D59CE0200C93B04 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7ECD95811D59DAE600C93B04 /* UIBarButtonItem+ */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD95821D59DAE600C93B04 /* UIBarButtonItem+ATExtension.h */,
+				7ECD95831D59DAE600C93B04 /* UIBarButtonItem+ATExtension.m */,
+			);
+			path = "UIBarButtonItem+";
+			sourceTree = "<group>";
+		};
+		ADA59C76974FF795CF896CD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D714144C7D8E1F84D6316AFA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE3A5F91FFCDDA56BA8AED72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64CBC93A83CF192C284754C4 /* Pods.debug.xcconfig */,
+				42E0FD0404C9D9FDEDE4FDFF /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7ECD94EB1D59C58500C93B04 /* SMNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ECD95191D59C58500C93B04 /* Build configuration list for PBXNativeTarget "SMNote" */;
+			buildPhases = (
+				8964C93B5A31C770AF3344B1 /* Check Pods Manifest.lock */,
+				7ECD94E81D59C58500C93B04 /* Sources */,
+				7ECD94E91D59C58500C93B04 /* Frameworks */,
+				7ECD94EA1D59C58500C93B04 /* Resources */,
+				9B704510ECC02CA495322E6E /* Embed Pods Frameworks */,
+				D113C7B67BFDC785E58C0058 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMNote;
+			productName = SMNote;
+			productReference = 7ECD94EC1D59C58500C93B04 /* SMNote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7ECD95041D59C58500C93B04 /* SMNoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ECD951C1D59C58500C93B04 /* Build configuration list for PBXNativeTarget "SMNoteTests" */;
+			buildPhases = (
+				7ECD95011D59C58500C93B04 /* Sources */,
+				7ECD95021D59C58500C93B04 /* Frameworks */,
+				7ECD95031D59C58500C93B04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7ECD95071D59C58500C93B04 /* PBXTargetDependency */,
+			);
+			name = SMNoteTests;
+			productName = SMNoteTests;
+			productReference = 7ECD95051D59C58500C93B04 /* SMNoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7ECD950F1D59C58500C93B04 /* SMNoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ECD951F1D59C58500C93B04 /* Build configuration list for PBXNativeTarget "SMNoteUITests" */;
+			buildPhases = (
+				7ECD950C1D59C58500C93B04 /* Sources */,
+				7ECD950D1D59C58500C93B04 /* Frameworks */,
+				7ECD950E1D59C58500C93B04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7ECD95121D59C58500C93B04 /* PBXTargetDependency */,
+			);
+			name = SMNoteUITests;
+			productName = SMNoteUITests;
+			productReference = 7ECD95101D59C58500C93B04 /* SMNoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7ECD94E41D59C58500C93B04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SM;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = MSY;
+				TargetAttributes = {
+					7ECD94EB1D59C58500C93B04 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					7ECD95041D59C58500C93B04 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7ECD94EB1D59C58500C93B04;
+					};
+					7ECD950F1D59C58500C93B04 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7ECD94EB1D59C58500C93B04;
+					};
+				};
+			};
+			buildConfigurationList = 7ECD94E71D59C58500C93B04 /* Build configuration list for PBXProject "SMNote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7ECD94E31D59C58500C93B04;
+			productRefGroup = 7ECD94ED1D59C58500C93B04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7ECD94EB1D59C58500C93B04 /* SMNote */,
+				7ECD95041D59C58500C93B04 /* SMNoteTests */,
+				7ECD950F1D59C58500C93B04 /* SMNoteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7ECD94EA1D59C58500C93B04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ECD94FF1D59C58500C93B04 /* LaunchScreen.storyboard in Resources */,
+				7ECD94FC1D59C58500C93B04 /* Assets.xcassets in Resources */,
+				7ECD94FA1D59C58500C93B04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ECD95031D59C58500C93B04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ECD950E1D59C58500C93B04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8964C93B5A31C770AF3344B1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B704510ECC02CA495322E6E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D113C7B67BFDC785E58C0058 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7ECD94E81D59C58500C93B04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E4045351D5DB52C00C1CC6E /* SMNoteDetailModel.m in Sources */,
+				7ECD955B1D59CE0200C93B04 /* UIColor+ATHex.m in Sources */,
+				7ECD95761D59D4E200C93B04 /* ATBaseModel.m in Sources */,
+				7ECD95591D59CE0200C93B04 /* AppInteractor.m in Sources */,
+				7E427DE41D5C83D100913B0E /* SMNoteDetailView.m in Sources */,
+				7E427DD21D5C825500913B0E /* SMNoteFolderAdapter.m in Sources */,
+				7ECD955A1D59CE0200C93B04 /* UIButton+AtCreate.m in Sources */,
+				7E427DD81D5C825500913B0E /* SMNoteMemoBottomView.m in Sources */,
+				7E4045311D5D68D900C1CC6E /* SMNoteDetailBottomToolBar.m in Sources */,
+				7ECD95621D59CE8500C93B04 /* ATBaseController.m in Sources */,
+				7E7EB5451D5F159D00DC208E /* UIViewController+BackButtonHandler.m in Sources */,
+				7E427DD61D5C825500913B0E /* SMNoteFolderView.m in Sources */,
+				7E1272631D5AF3230080F71C /* SMDaoFactory.m in Sources */,
+				7ECD95541D59CE0200C93B04 /* ATTableViewAdapter.m in Sources */,
+				7ECD94F71D59C58500C93B04 /* ViewController.m in Sources */,
+				7E4045391D5DB88900C1CC6E /* NSString+ATConverter.m in Sources */,
+				7ECD95801D59D9D300C93B04 /* ATNavigationController.m in Sources */,
+				7ECD955F1D59CE0200C93B04 /* UIView+ATExtension.m in Sources */,
+				7E982FA71D5E01E700217F41 /* SMNoteMemoLogicDaoImpl.m in Sources */,
+				7ECD95531D59CE0200C93B04 /* ATInteractor.m in Sources */,
+				7ECD95581D59CE0200C93B04 /* ATTableViewCell.m in Sources */,
+				7E982FAA1D5E0EA400217F41 /* SMNoteMemoCell.m in Sources */,
+				7E427DD11D5C825500913B0E /* SMNoteFolderModel.m in Sources */,
+				7ECD95551D59CE0200C93B04 /* ATCommonCellModel.m in Sources */,
+				7ECD95571D59CE0200C93B04 /* ATEmptyCell.m in Sources */,
+				7E5F78BD1D61B0E90089A559 /* SMDeleteAlertController.m in Sources */,
+				7E427DD31D5C825500913B0E /* SMNoteFolderBottomView.m in Sources */,
+				7E5F78B81D61700B0089A559 /* SMNoteTrashFolderLogicDaoImpl.m in Sources */,
+				7E427DD41D5C825500913B0E /* SMNoteFolderController.m in Sources */,
+				7E1272681D5AFC510080F71C /* SMBaseDaoImpl.m in Sources */,
+				7E427DD01D5C825500913B0E /* SMNoteFolderCell.m in Sources */,
+				7E427DD71D5C825500913B0E /* SMNoteMemoAdapter.m in Sources */,
+				7ECD95561D59CE0200C93B04 /* ATTableView.m in Sources */,
+				7E427DDE1D5C827C00913B0E /* SMNoteDetailController.m in Sources */,
+				7E427DD91D5C825500913B0E /* SMNoteMemoController.m in Sources */,
+				7E427DD51D5C825500913B0E /* SMNoteFolderInteractor.m in Sources */,
+				7ECD955E1D59CE0200C93B04 /* UITableViewCell+DD.m in Sources */,
+				7E12726B1D5B07430080F71C /* SMNoteFolderLogicDaoImpl.m in Sources */,
+				7E7EB5401D5F10D500DC208E /* SMDaoNotificationUtil.m in Sources */,
+				7ECD955C1D59CE0200C93B04 /* UILabel+ATCreate.m in Sources */,
+				7ECD955D1D59CE0200C93B04 /* UILabel+ATLabelHeight.m in Sources */,
+				7ECD95841D59DAE600C93B04 /* UIBarButtonItem+ATExtension.m in Sources */,
+				7ECD94F41D59C58500C93B04 /* AppDelegate.m in Sources */,
+				7E427DDB1D5C825500913B0E /* SMNoteMemoView.m in Sources */,
+				7E427DDA1D5C825500913B0E /* SMNoteMemoInteractor.m in Sources */,
+				7E427DE81D5C85D700913B0E /* ATTextView.m in Sources */,
+				7ECD94F11D59C58500C93B04 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ECD95011D59C58500C93B04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ECD950A1D59C58500C93B04 /* SMNoteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ECD950C1D59C58500C93B04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ECD95151D59C58500C93B04 /* SMNoteUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7ECD95071D59C58500C93B04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7ECD94EB1D59C58500C93B04 /* SMNote */;
+			targetProxy = 7ECD95061D59C58500C93B04 /* PBXContainerItemProxy */;
+		};
+		7ECD95121D59C58500C93B04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7ECD94EB1D59C58500C93B04 /* SMNote */;
+			targetProxy = 7ECD95111D59C58500C93B04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7ECD94F81D59C58500C93B04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ECD94F91D59C58500C93B04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7ECD94FD1D59C58500C93B04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ECD94FE1D59C58500C93B04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7ECD95171D59C58500C93B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7ECD95181D59C58500C93B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7ECD951A1D59C58500C93B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64CBC93A83CF192C284754C4 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = $SRCROOT/SMNote/PrefixHeader.pch;
+				INFOPLIST_FILE = SMNote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MSY.SMNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+			};
+			name = Debug;
+		};
+		7ECD951B1D59C58500C93B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42E0FD0404C9D9FDEDE4FDFF /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = $SRCROOT/SMNote/PrefixHeader.pch;
+				INFOPLIST_FILE = SMNote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MSY.SMNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+			};
+			name = Release;
+		};
+		7ECD951D1D59C58500C93B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SMNoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MSY.SMNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMNote.app/SMNote";
+			};
+			name = Debug;
+		};
+		7ECD951E1D59C58500C93B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SMNoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MSY.SMNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMNote.app/SMNote";
+			};
+			name = Release;
+		};
+		7ECD95201D59C58500C93B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SMNoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MSY.SMNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SMNote;
+			};
+			name = Debug;
+		};
+		7ECD95211D59C58500C93B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SMNoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MSY.SMNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SMNote;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7ECD94E71D59C58500C93B04 /* Build configuration list for PBXProject "SMNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ECD95171D59C58500C93B04 /* Debug */,
+				7ECD95181D59C58500C93B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7ECD95191D59C58500C93B04 /* Build configuration list for PBXNativeTarget "SMNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ECD951A1D59C58500C93B04 /* Debug */,
+				7ECD951B1D59C58500C93B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7ECD951C1D59C58500C93B04 /* Build configuration list for PBXNativeTarget "SMNoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ECD951D1D59C58500C93B04 /* Debug */,
+				7ECD951E1D59C58500C93B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7ECD951F1D59C58500C93B04 /* Build configuration list for PBXNativeTarget "SMNoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ECD95201D59C58500C93B04 /* Debug */,
+				7ECD95211D59C58500C93B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7ECD94E41D59C58500C93B04 /* Project object */;
+}

@@ -1,0 +1,22 @@
+PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - Masonry (1.0.1)
+  - MJExtension (3.0.13)
+  - YTKKeyValueStore (0.1.2):
+    - FMDB (~> 2.0)
+
+DEPENDENCIES:
+  - FMDB (~> 2.6.2)
+  - Masonry (~> 1.0.1)
+  - MJExtension (~> 3.0.13)
+  - YTKKeyValueStore (~> 0.1.2)
+
+SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  YTKKeyValueStore: 4d002941540dd5108fa23009b71e0f2f937f7a0f
+
+COCOAPODS: 0.39.0

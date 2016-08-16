@@ -1,0 +1,7 @@
+
+
+pod 'YTKKeyValueStore', '~> 0.1.2'
+pod 'FMDB', '~> 2.6.2'
+pod 'Masonry', '~> 1.0.1'
+pod 'MJExtension', '~> 3.0.13'
+

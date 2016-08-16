@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  SMNote
+//
+//  Created by SimonMiao on 16/8/9.
+//  Copyright © 2016年 MSY. All rights reserved.
+//
+
+//#ifndef PrefixHeader_pch
+//#define PrefixHeader_pch
+
+#ifdef __OBJC__
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "SharedConfig.h"
+#import "SharedMacro.h"
+#import "SMSharedNotification.h"
+
+#endif /* PrefixHeader_pch */
