@@ -89,7 +89,11 @@
                 [weakSelf.interactor pushToNoteDetailWithFolderOrder:weakSelf.folderModel.order detailCtr:nil];
                 break;
             case SMNoteMemoBottomViewBtnTypeOfDelete:{
-                [[_Dao getMemoDao] removeMemos:[weakSelf.adapter.deleteArray copy] async:YES];
+                if (0 == weakSelf.folderModel.order.integerValue) {
+                    [[_Dao getTrashFolderDao] removeTrashMemos:[weakSelf.adapter.deleteArray copy] async:YES];
+                } else {
+                    [[_Dao getMemoDao] removeMemos:[weakSelf.adapter.deleteArray copy] async:YES];
+                }
                 [weakSelf.adapter.adapterArray removeObjectsInArray:weakSelf.adapter.deleteArray];
                 [weakSelf.menoView refreshTableView];
                 weakSelf.bottomView.memoNumber = weakSelf.adapter.adapterArray.count;
@@ -103,7 +107,12 @@
                 UIAlertController *alertCtr = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
                 UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"退出" style:UIAlertActionStyleCancel handler:nil];
                 UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    [[_Dao getMemoDao] removeMemos:[weakSelf.adapter.adapterArray copy] async:YES];
+                    if (0 == weakSelf.folderModel.order.integerValue) {
+                        [[_Dao getTrashFolderDao] removeTrashMemos:[weakSelf.adapter.adapterArray copy] async:YES];
+                    } else {
+                        [[_Dao getMemoDao] removeMemos:[weakSelf.adapter.adapterArray copy] async:YES];
+                    }
+                    
                     [weakSelf.adapter.adapterArray removeAllObjects];
                     [weakSelf.menoView refreshTableView];
                     weakSelf.bottomView.memoNumber = weakSelf.adapter.adapterArray.count;

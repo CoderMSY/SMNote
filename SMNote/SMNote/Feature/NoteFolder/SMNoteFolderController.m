@@ -67,7 +67,7 @@
     [self.folderView setTableViewAdapter:self.adapter];
     
     [self createRightItem];
-//    [self loadDataSource];
+    [self loadDataSource];
     
     ATWeakSelf
     [self.bottomView BottomViewBtnClickedWithBlock:^(SMBottomViewBtnType type) {
@@ -131,7 +131,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self loadDataSource];
+//    [self loadDataSource];
 }
 
 - (void)createRightItem {
@@ -243,12 +243,12 @@
 {
     if ([cellData isKindOfClass:[SMNoteFolderModel class]]) {
         SMNoteFolderModel *model = (SMNoteFolderModel *)cellData;
-        if (0 == model.order.integerValue) {
-            if (!self.folderView.dataTableView.editing) {
-                ATLog(@"废纸篓被点击啦");
-                [self.interactor goToNoteMemoPageNoteFolderModel:cellData];
-            }
-        } else {
+//        if (0 == model.order.integerValue) {
+//            if (!self.folderView.dataTableView.editing) {
+//                
+//                [self.interactor goToNoteMemoPageNoteFolderModel:cellData];
+//            }
+//        } else {
             if (self.folderView.dataTableView.editing) {
                 [self.adapter.deleteArray addObject:self.adapter.adapterArray[indexPath.row]];
                 ATLog(@"编辑状态的cell被点击了");
@@ -258,9 +258,15 @@
 //                __block SMNoteFolderModel *folderModel = cellData;
                 ATWeakSelf
                 [self.interactor returnNoteMemoNumber:^(NSUInteger memoNum) {
-                    if (model.number.integerValue != memoNum && model.order.integerValue != 0) {
-                        model.number = @(memoNum);
-                        [[_Dao getFolderDao] insertFolder:model async:YES];
+                    if (model.number.integerValue != memoNum) {
+                        if (0 != model.order.integerValue ) {
+                            model.number = @(memoNum);
+                            [[_Dao getFolderDao] insertFolder:model async:YES];
+                            
+                        } else {
+                            model.number = @(memoNum);
+                            ATLog(@"废纸篓被点击啦");
+                        }
                         NSUInteger index = [weakSelf.adapter.adapterArray indexOfObject:model];
                         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
                         [weakSelf.folderView.dataTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -268,7 +274,7 @@
                 }];
                 [self.interactor goToNoteMemoPageNoteFolderModel:cellData];
             }
-        }
+//        }
     }
 }
 

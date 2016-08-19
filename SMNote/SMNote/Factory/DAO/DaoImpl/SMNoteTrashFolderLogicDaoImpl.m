@@ -56,7 +56,7 @@ static  NSString *const tableName = @"SMNoteTrashFolderTable";
 - (void)removeTrashMemos:(NSArray<SMNoteDetailModel *> *)memos async:(BOOL)async {
     dispatch_block_t block = ^(){
         for (SMNoteDetailModel *model in memos) {
-            [_DaoStore deleteObjectById:model.order.stringValue fromTable:tableName];
+            [_DaoStore deleteObjectById:model.timestamp.stringValue fromTable:tableName];
         }
         
     };
