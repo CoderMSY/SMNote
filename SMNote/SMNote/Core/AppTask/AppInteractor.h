@@ -12,6 +12,10 @@
 
 @property (nonatomic, strong) UIWindow *keyWindow;
 
+- (void)creatShortcutItems;
+- (void)judgeTheShortcutItemType:(NSString *)type;
+
+
 - (void)startUIFlow;
 
 //- (void)starLogin;

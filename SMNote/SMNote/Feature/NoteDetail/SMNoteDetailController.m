@@ -25,9 +25,30 @@
 
 @implementation SMNoteDetailController
 
+- (NSArray<id<UIPreviewActionItem>> *)previewActionItems {
+    // setup a list of preview actions
+    UIPreviewAction *action1 = [UIPreviewAction actionWithTitle:@"Aciton1" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        ATLog(@"Aciton1");
+    }];
+    
+    UIPreviewAction *action2 = [UIPreviewAction actionWithTitle:@"Aciton2" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        ATLog(@"Aciton2");
+    }];
+    
+    UIPreviewAction *action3 = [UIPreviewAction actionWithTitle:@"Aciton3" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        ATLog(@"Aciton3");
+    }];
+    
+    NSArray *actions = @[action1,action2,action3];
+    
+    // and return them (return the array of actions instead to see all items ungrouped)
+    return actions;
+}
+
 - (BOOL)navigationShouldPopOnBackButton {
     [self.detailView resignKeyboard];
     
+    ATLog(@"测试运行到哪里了");
     return YES;
 }
 

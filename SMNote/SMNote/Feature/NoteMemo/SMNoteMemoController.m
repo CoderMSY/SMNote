@@ -7,6 +7,7 @@
 // 备忘录控制器
 
 #import "SMNoteMemoController.h"
+#import "SMNoteDetailController.h"
 #import "SMNoteMemoView.h"
 #import "SMNoteMemoBottomView.h"
 #import "SMNoteMemoAdapter.h"
@@ -19,7 +20,7 @@
 #import "SMNoteDetailModel.h"
 #import "SMDaoFactory.h"
 
-@interface SMNoteMemoController () <ATTableViewAdapterDelegate>
+@interface SMNoteMemoController () <ATTableViewAdapterDelegate,UIViewControllerPreviewingDelegate>
 
 @property (nonatomic, strong) SMNoteMemoView *menoView;
 @property (nonatomic, strong) SMNoteMemoBottomView *bottomView;
@@ -203,9 +204,46 @@
     }
 }
 
+- (void)willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
+        //给cell注册3DTouch的peek（预览）和pop功能
+        [self registerForPreviewingWithDelegate:self sourceView:cell];
+    } else {
+        ATLog(@"3D Touch 无效");
+    }
+}
+
+#pragma mark - UIViewControllerPreviewingDelegate
+
+//peek(预览)
+- (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
+    //获取按压的cell所在行，[previewingContext sourceView]就是按压的那个视图
+    NSIndexPath *indexPath = [self.menoView.dataTableView indexPathForCell:(UITableViewCell *)[previewingContext sourceView]];
+    //设定预览的界面
+    SMNoteDetailController *ctr = [[SMNoteDetailController alloc] init];
+    ctr.foldOrder = self.folderModel.order;
+    ctr.detailModel = self.adapter.adapterArray[indexPath.row];
+    ctr.preferredContentSize = CGSizeMake(0.0, 500.0);
+    
+    //调整不被虚化的范围，按压的那个cell不被虚化（轻轻按压时周边会被虚化，再少用力展示预览，再加力跳页至设定界面）
+    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width,40);
+    previewingContext.sourceRect = rect;
+    
+    return ctr;
+}
+
+//pop（按用点力进入）
+- (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit {
+    [self showViewController:viewControllerToCommit sender:self];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    [Notif removeObserver:self];
 }
 
 @end

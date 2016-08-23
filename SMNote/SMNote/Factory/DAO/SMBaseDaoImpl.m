@@ -21,8 +21,8 @@
         });
     } else {
         dispatch_sync(SMGlobalQueue, ^{
-            block();
             ATLog(@"***write***---%@,---isMainThread:%i",[NSThread currentThread],[NSThread isMainThread]);
+            block();
         });
     }
 }
